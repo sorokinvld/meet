@@ -50,9 +50,9 @@ function DemoMeetingTab({ label }: { label: string }) {
   };
   return (
     <div className={styles.tabContent}>
-      <p style={{ margin: 0 }}>Try LiveKit Meet for free with our live demo project.</p>
+      <p style={{ margin: 0 }}> диалоговая операционная система с искусственным интеллектом </p>
       <button style={{ marginTop: '1rem' }} className="lk-button" onClick={startMeeting}>
-        Start Meeting
+        Начать
       </button>
       <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
         <div style={{ display: 'flex', flexDirection: 'row', gap: '1rem' }}>
@@ -102,13 +102,13 @@ function CustomConnectionTab({ label }: { label: string }) {
   return (
     <form className={styles.tabContent} onSubmit={onSubmit}>
       <p style={{ marginTop: 0 }}>
-        Connect LiveKit Meet with a custom server using LiveKit Cloud or LiveKit Server.
+        Общайтесь с агентами и управляете своим облачным компьютером.
       </p>
       <input
         id="serverUrl"
         name="serverUrl"
         type="url"
-        placeholder="LiveKit Server URL: wss://*.livekit.cloud"
+        placeholder="Portal Server URL: wss://*.prtl.cc"
         required
       />
       <textarea
@@ -150,7 +150,7 @@ function CustomConnectionTab({ label }: { label: string }) {
         className="lk-button"
         type="submit"
       >
-        Connect
+        Начать
       </button>
     </form>
   );
@@ -177,30 +177,30 @@ const Home = ({ tabIndex }: InferGetServerSidePropsType<typeof getServerSideProp
         <div className="header">
           <img src="/images/livekit-meet-home.svg" alt="LiveKit Meet" width="360" height="45" />
           <h2>
-            Open source video conferencing app built on{' '}
-            <a href="https://github.com/livekit/components-js?ref=meet" rel="noopener">
-              LiveKit&nbsp;Components
+            Облачный компьютер с искусственным интеллектом{' '}
+            <a href="https://prtl.cc" rel="noopener">
+             Портал&nbsp;OS
             </a>
             ,{' '}
-            <a href="https://livekit.io/cloud?ref=meet" rel="noopener">
-              LiveKit&nbsp;Cloud
+            <a href="https://prtl.cc" rel="noopener">
+              Portal&nbsp;OS
             </a>{' '}
-            and Next.js.
+            Made in Russia.
           </h2>
         </div>
         <Tabs selectedIndex={tabIndex} onTabSelected={onTabSelected}>
-          <DemoMeetingTab label="Demo" />
-          <CustomConnectionTab label="Custom" />
+          <DemoMeetingTab label="демо" />
+          <CustomConnectionTab label="своя комната" />
         </Tabs>
       </main>
       <footer data-lk-theme="default">
         Hosted on{' '}
-        <a href="https://livekit.io/cloud?ref=meet" rel="noopener">
-          LiveKit Cloud
+        <a href="https://prtl.cc" rel="noopener">
+          АО Портал
         </a>
-        . Source code on{' '}
-        <a href="https://github.com/livekit/meet?ref=meet" rel="noopener">
-          GitHub
+        . Больше информации{' '}
+        <a href="https://prtl.cc" rel="noopener">
+           Портал
         </a>
         .
       </footer>
