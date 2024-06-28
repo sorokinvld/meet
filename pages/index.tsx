@@ -101,9 +101,7 @@ function CustomConnectionTab({ label }: { label: string }) {
   };
   return (
     <form className={styles.tabContent} onSubmit={onSubmit}>
-      <p style={{ marginTop: 0 }}>
-        Общайтесь с агентами и управляете своим облачным компьютером.
-      </p>
+      <p style={{ marginTop: 0 }}>Общайтесь с агентами и управляете своим облачным компьютером.</p>
       <input
         id="serverUrl"
         name="serverUrl"
@@ -179,13 +177,9 @@ const Home = ({ tabIndex }: InferGetServerSidePropsType<typeof getServerSideProp
           <h2>
             Облачный компьютер с искусственным интеллектом{' '}
             <a href="https://prtl.cc" rel="noopener">
-             Портал&nbsp;OS
+              Портал&nbsp;OS
             </a>
-            ,{' '}
-            <a href="https://prtl.cc" rel="noopener">
-              Portal&nbsp;OS
-            </a>{' '}
-            Made in Russia.
+            , Made in Russia.
           </h2>
         </div>
         <Tabs selectedIndex={tabIndex} onTabSelected={onTabSelected}>
@@ -197,10 +191,6 @@ const Home = ({ tabIndex }: InferGetServerSidePropsType<typeof getServerSideProp
         Hosted on{' '}
         <a href="https://prtl.cc" rel="noopener">
           АО Портал
-        </a>
-        . Больше информации{' '}
-        <a href="https://prtl.cc" rel="noopener">
-           Портал
         </a>
         .
       </footer>
