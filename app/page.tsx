@@ -163,28 +163,21 @@ export default function Page() {
     <>
       <main className={styles.main} data-lk-theme="default">
         <div className="header">
-          <img src="/images/livekit-meet-home.svg" alt="LiveKit Meet" width="360" height="45" />
+          <img src="/images/livekit-meet-home.svg" alt="Portal Meet" width="360" height="45" />
           <h2>
             Облачный компьютер с искусственным интеллектом{' '}
-            <a href="https://prtl.cc" rel="noopener">
+            <a href="https://portalos.ru" rel="noopener">
               Портал&nbsp;OS
             </a>
             , Made in Russia.
           </h2>
         </div>
-<<<<<<< HEAD:pages/index.tsx
-        <Tabs selectedIndex={tabIndex} onTabSelected={onTabSelected}>
-          <DemoMeetingTab label="демо" />
-          <CustomConnectionTab label="своя комната" />
-        </Tabs>
-=======
-        <Suspense fallback="Loading">
+        <Suspense fallback="Загрузка">
           <Tabs>
-            <DemoMeetingTab label="Demo" />
-            <CustomConnectionTab label="Custom" />
+            <DemoMeetingTab label="Демо" />
+            <CustomConnectionTab label="Своя" />
           </Tabs>
         </Suspense>
->>>>>>> upstream/main:app/page.tsx
       </main>
       <footer data-lk-theme="default">
         Hosted on{' '}
