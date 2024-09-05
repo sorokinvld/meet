@@ -1,4 +1,5 @@
-import { LocalAudioTrack, LocalVideoTrack } from 'livekit-client';
+import { LocalAudioTrack, LocalVideoTrack, videoCodecs } from 'livekit-client';
+import { VideoCodec } from 'livekit-client';
 
 export interface SessionProps {
   roomName: string;
@@ -14,3 +15,14 @@ export interface TokenResult {
   identity: string;
   accessToken: string;
 }
+
+export function isVideoCodec(codec: string): codec is VideoCodec {
+  return videoCodecs.includes(codec as VideoCodec);
+}
+
+export type ConnectionDetails = {
+  serverUrl: string;
+  roomName: string;
+  participantName: string;
+  participantToken: string;
+};
