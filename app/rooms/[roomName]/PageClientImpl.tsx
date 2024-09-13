@@ -50,8 +50,7 @@ export function PageClientImpl(props: {
 
   const handlePreJoinSubmit = React.useCallback(async (values: LocalUserChoices) => {
     setPreJoinChoices(values);
-    const url = new URL('/', window.location.origin);
-    url.pathname = CONN_DETAILS_ENDPOINT;
+    const url = new URL(CONN_DETAILS_ENDPOINT, window.location.origin);
     url.searchParams.append('roomName', props.roomName);
     url.searchParams.append('participantName', values.username);
     if (props.region) {
@@ -64,7 +63,7 @@ export function PageClientImpl(props: {
   const handlePreJoinError = React.useCallback((e: any) => console.error(e), []);
 
   return (
-    <main data-lk-theme="default">
+    <main data-lk-theme="default" style={{ height: '100%' }}>
       {connectionDetails === undefined || preJoinChoices === undefined ? (
         <div style={{ display: 'grid', placeItems: 'center', height: '100%' }}>
           <PreJoin
